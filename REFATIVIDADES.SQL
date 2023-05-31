@@ -1,0 +1,23 @@
+CREATE TABLE ATIVIDADES(
+        COORDENADOR VARCHAR(15),
+        
+        PROFESSORES VARCHAR(15),
+        
+        ALUNOS VARCHAR(15),
+        
+        NOME VARCHAR(15) NOT NULL,
+        
+        MATRICULA CHAR(10) UNIQUE NOT NULL,
+        
+        IDADE VARCHAR (2) NOT NULL,
+        
+        AULAS VARCHAR(100) INT,
+        
+        PRIMARY KEY(MATRICULA)
+        
+        FOREIGN KEY (NOME) REFERENCES SOCIO (NOME),
+        
+        FOREIGN KEY (NOME_DO_MEIO) REFERENCES SOCIO (NOME_DO_MEIO),
+        
+        FOREIGN KEY (ULTIMO_NOME) REFERENCES SOCIO (ULTIMO_NOME),
+        );
