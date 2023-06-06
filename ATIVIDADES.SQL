@@ -1,23 +1,16 @@
 CREATE TABLE ATIVIDADES(
-        COORDENADOR VARCHAR(15),
+
+        LOCAL VARCHAR(15) NOT NULL,
         
-        PROFESSORES VARCHAR(15),
+        ALUNO VARCHAR (15) INT,
         
-        ALUNOS VARCHAR(15),
+        PROFESSOR VARCHAR (15),
         
-        NOME VARCHAR(15) NOT NULL,
+        HORA TIME (0) NOT NULL,
+
+        CODIGO CHAR(10) UNIQUE NOT NULL,
         
-        MATRICULA CHAR(10) UNIQUE NOT NULL,
-        
-        IDADE VARCHAR (2) NOT NULL,
-        
-        AULAS VARCHAR(100) INT,
-        
-        PRIMARY KEY(MATRICULA),
-        
-        FOREIGN KEY (NOME) REFERENCES PESSOA (NOME),
-        
-        FOREIGN KEY (NOME_DO_MEIO) REFERENCES PESSOA (NOME_DO_MEIO),
-        
-        FOREIGN KEY (ULTIMO_NOME) REFERENCES PESSOA (ULTIMO_NOME)
+        PRIMARY KEY (CODIGO)
+    
         );
+        
